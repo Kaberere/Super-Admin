@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>KSG Equipment Portal Admin - Dashboard</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+    <a class="navbar-brand mr-1" href="index.html">KSG ICT Equipment Requisition Portal</a>
+
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navbar Search -->
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    
+
+    <!-- Navbar -->
+    <ul class="navbar-nav ml-auto ml-md-0">
+      <li class="nav-item dropdown no-arrow mx-1">
+        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-bell fa-fw"></i>
+          <span class="badge badge-danger">9+</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+          <a class="dropdown-item" href="#">New Notifications</a>
+          <a class="dropdown-item" href="#">View Old Notifications</a>
+          <!--<div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>-->
+        </div>
+      </li>
+      <li class="nav-item dropdown no-arrow mx-1">
+        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-envelope fa-fw"></i>
+          <span class="badge badge-danger">7</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
+          <a class="dropdown-item" href="#">New Messages</a>
+          <a class="dropdown-item" href="#">Inbox</a>
+          <!--<div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>-->
+        </div>
+      </li>
+      <li class="nav-item dropdown no-arrow">
+        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user-circle fa-fw"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+          <a class="dropdown-item" href="#">Settings</a>
+          <!--<a class="dropdown-item" href="#">Activity Log</a>-->
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+        </div>
+      </li>
+    </ul>
+
+  </nav>
+  
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Overview</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="Crud.html"> <!--<id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+            <i class="fas fa-fw fa-list-alt"></i>
+            <span>Create, Read, Update and Delete</span>
+          </a>
+      <li class="nav-item">
+        <a class="nav-link" href="PendingRequests.html"> <!--<id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+          <i class="fas fa-fw fa-eye"></i>
+          <span>Pending Requests</span>
+        </a>
+        <!--<div class="dropdown-menu" aria-labelledby="pagesDropdown">
+
+          <h6 class="dropdown-header">Login Screens:</h6>
+          <a class="dropdown-item" href="login.html">Login</a>
+          <a class="dropdown-item" href="register.html">Register</a>
+          <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>-->
+          <!--<div class="dropdown-divider"></div>
+          <h6 class="dropdown-header">Other Pages:</h6>
+          <a class="dropdown-item" href="404.html">404 Page</a>
+          <a class="dropdown-item" href="blank.html">Blank Page</a>
+        </div>-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="approvedRequests.html">
+          <i class="fas fa-fw fa-adjust"></i>
+          <span>Approved Requests</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="clearedRequests.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Cleared Requests</span></a>
+      </li>
+    </ul>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Create, Read, Update and Delete</li>
+        </ol>
+
+        <div class="container">
+          <form>
+            <div class="form-group>
+              <label class="control-label" for="equipment">Equipment:</label><span class="required">*</span>
+              <select class="browser-default custom-select-md">
+                  <option selected>Select One</option>
+                  <option value="1">Laptop</option>
+                  <option value="2">Laptop Charger</option>
+                  <option value="3">LCD Projector</option>
+                  <option value="4">Printer</option>
+                  <option value="5">Extension Cables</option>
+              </select>
+            </div>
+            <br> 
+            <div class="form-group">
+                <label class="control-label" for="make">Make</label> <span class="required">*</span>
+                <input type="make" class="form-control" required="required" id="exampleFormControlInput1" rows="3"></input>
+              </div>
+              <br>
+              <div class="form-group">
+                <label class="control-label" for="serialno">Serial Number</label><span class="required">*</span>
+                <input type="serialno" class="form-control" required="required" id="exampleFormControlInput1" rows="3"></input>
+              </div>
+              <br>
+              <div class="form-group">
+                <label class="control-label" for="assettag">Asset Tag Number</label>
+                  <input type="assettag" class="form-control" id="exampleFormControlInput1" rows="3"></input>
+              </div>
+              <br>
+            <div class="form-group">
+              <label class="control-label" for="approve">KSG Campus:</label><span class="required">*</span>
+              <select class="browser-default custom-select-md">
+                  <option selected>Select Campus</option>
+                  <option value="1">KSG Lower Kabete</option>
+                  <option value="2">eLDi</option>
+                  <option value="3">KSG Baringo</option>
+                  <option value="4">KSG Embu</option>
+                  <option value="5">KSG Mombasa</option>
+                  <option value="6">KSG Matuga</option>
+              </select>
+            </div>
+            <br>
+            <button type="button" class="btn btn-primary btn-lg submit-button">Add</button>
+            <button type="button" class="btn btn-info btn-lg submit-button">Edit</button>
+            <button type="button" class="btn btn-danger btn-lg submit-button">Delete</button>
+          </form>
+        </div>
+      
+  
+
+        <!-- DataTables Example
+        <div class="card mb-4">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            List of Requestors</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Equipment</th>
+                    <th>Make</th>
+                    <th>Serial No</th>
+                    <th>Asset Tag No</th>
+                    <th>Campus</th>
+                    <th>Actions(Create, Edit and Delete)</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Equipment</th>
+                    <th>Make</th>
+                    <th>Serial No</th>
+                    <th>Asset Tag No</th>
+                    <th>Campus</th>
+                    <th>Actions(Create, Edit and Delete)</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td>
+                        <select class="browser-default custom-select">
+                            <option selected>Select One</option>
+                            <option value="1">Laptop</option>
+                            <option value="2">Laptop Charger</option>
+                            <option value="3">LCD Projector</option>
+                            <option value="4">Printer</option>
+                            <option value="5">Extension Cable</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <div class="col-sm-auto">
+                              <input class="form-control" id="ex1" type="text">
+                            </div>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <div class="col-sm-auto">
+                              <input class="form-control" id="ex1" type="text">
+                            </div>
+                    </td>
+                    <td>
+                        <div class="form-group row">
+                            <div class="col-sm-auto">
+                              <input class="form-control" id="ex1" type="text">
+                            </div>
+                    </td>
+                    <td>
+                        <select class="browser-default custom-select">
+                            <option selected>Select Campus</option>
+                            <option value="1">KSG Lower Kabete</option>
+                            <option value="2">eLDi</option>
+                            <option value="3">KSG Baringo</option>
+                            <option value="4">KSG Embu</option>
+                            <option value="5">KSG Mombasa</option>
+                            <option value="6">KSG Matuga</option>
+                        </select>
+                        
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary btn-sm submit-button">Add</button>
+                        <button type="button" class="btn btn-info btn-sm submit-button">Edit</button>
+                        <button type="button" class="btn btn-danger btn-sm submit-button">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        </div>-->
+
+      </div>
+      <!-- /.container-fluid -->
+
+      <!-- Sticky Footer -->
+      <footer class="sticky-footer">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright © Kenya School of Government 2019</span>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Page level plugin JavaScript-->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="vendor/datatables/jquery.dataTables.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin.min.js"></script>
+
+  <!-- Demo scripts for this page-->
+  <script src="js/demo/datatables-demo.js"></script>
+  <script src="js/demo/chart-area-demo.js"></script>
+
+  <!----<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "";
+    };
+  </script>-->
+
+</body>
+
+</html>
