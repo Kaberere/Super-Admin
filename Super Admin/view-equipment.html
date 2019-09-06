@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Pending Requests</title>
+  <title>View Equipment</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -100,7 +100,7 @@
           <i class="fas fa-fw fa-list-alt"></i>
           <span>Create, Read, Update and Delete</span>
         </a>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="PendingRequests.html"> <!--<id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
           <i class="fas fa-fw fa-eye"></i>
           <span>Pending Requests</span>
@@ -122,7 +122,7 @@
           <i class="fas fa-fw fa-adjust"></i>
           <span>Approved Requests</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="view-equipment.html">
           <i class="fas fa-fw fa-adjust"></i>
           <span>View Equipment</span></a>
@@ -148,35 +148,35 @@
           <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active">Pending Requests</li>
+          <li class="breadcrumb-item active">View Equipment</li>
         </ol>
 
         <!-- DataTables Example -->
         <div class="card mb-4">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            List of Requestors</div>
+            View Equipment</div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Name</th>
                     <th>Equipment</th>
-                    <th>Purpose</th>
-                    <th>Date of Request</th>
-                    <th>Date of Return</th>
-                    <th></th>
+                    <th>Make</th>
+                    <th>Serial Number</th>
+                    <th>Asset Tag Number</th>
+                    <th>Campus</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tfoot>
                   <tr>
-                    <th>Name</th>
                     <th>Equipment</th>
-                    <th>Purpose</th>
-                    <th>Date of Request</th>
-                    <th>Date of Return</th>
-                    <th></th>
+                    <th>Make</th>
+                    <th>Serial Number</th>
+                    <th>Asset Tag Number</th>
+                    <th>Campus</th>
+                    <th>Action</th>
                   </tr>
                 </tfoot>
                 <tbody>
@@ -187,9 +187,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn btn-success">Assign 
-                        <a class="nav-link" href="assign.html">
-                        </button>
+                        <button type="button" class="btn btn-danger btn-lg submit-button">Delete</button>
                     </td>
                   </tr>
                   <tr>
@@ -199,9 +197,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn btn-success">Assign 
-                        <a class="nav-link" href="assign.html">
-                        </button>
+                        <button type="button" class="btn btn-danger btn-lg submit-button">Delete</button>
                     </td>
                   </tr>
                   <tr>
@@ -211,9 +207,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn btn-success">Assign 
-                        <a class="nav-link" href="assign.html">
-                        </button>
+                        <button type="button" class="btn btn-danger btn-lg submit-button">Delete</button>
                     </td>
                   </tr>
                   <!--<tr>
@@ -543,9 +537,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn btn-success">Assign 
-                        <a class="nav-link" href="assign.html">
-                        </button>
+                        <button type="button" class="btn btn-danger btn-lg submit-button">Delete</button>
                     </td>
                   </tr>
                   <tr>
@@ -555,9 +547,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn btn-success">Assign 
-                        <a class="nav-link" href="assign.html">
-                        </button>
+                        <button type="button" class="btn btn-danger btn-lg submit-button">Delete</button>
                     </td>
                   </tr>
                   <tr>
@@ -567,9 +557,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn btn-success">Assign 
-                        <a class="nav-link" href="assign.html">
-                        </button>
+                        <button type="button" class="btn btn-danger btn-lg submit-button">Delete</button>
                     </td>
                   </tr>
                   <tr>
@@ -579,9 +567,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn btn-success">Assign 
-                        <a class="nav-link" href="assign.html">
-                        </button>
+                        <button type="button" class="btn btn-danger btn-lg submit-button">Delete</button>
                     </td>
                   </tr>
                   <tr>
@@ -591,9 +577,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn btn-success">Assign 
-                        <a class="nav-link" href="assign.html">
-                        </button>
+                        <button type="button" class="btn btn-danger btn-lg submit-button">Delete</button>
                     </td>
                   </tr>
                   <tr>
@@ -603,9 +587,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn btn-success">Assign 
-                        <a class="nav-link" href="assign.html">
-                        </button>
+                        <button type="button" class="btn btn-danger btn-lg submit-button">Delete</button>
                     </td>
                   </tr>
                   <tr>
@@ -615,9 +597,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn btn-success">Assign 
-                        <a class="nav-link" href="assign.html">
-                        </button>
+                        <button type="button" class="btn btn-danger btn-lg submit-button">Delete</button>
                     </td>
                   </tr>
                   <tr>
@@ -627,9 +607,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                      <button type="button" class="btn btn-success">Assign 
-                        <a class="nav-link" href="assign.html">
-                        </button>
+                        <button type="button" class="btn btn-danger btn-lg submit-button">Delete</button>
                     </td>
                   </tr>
                   <!--<tr>
